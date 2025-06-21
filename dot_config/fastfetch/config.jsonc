@@ -1,29 +1,92 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": "manjaro_small",
-  "modules": [
-    "title",
-    "separator",
-    "os",
-    "kernel",
-    "uptime",
-    "packages",
-    "shell",
-    "display",
-    "de",
-    "wm",
-    "terminalfont",
-    "cpu",
-    {
-      "type": "gpu",
-      "format": "{name} {driver} [{6}]"
+  "logo": {
+    "padding": {
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": ">   ",
+    "color": {
+      "separator": "red"
     },
-    "memory",
-    "disk",
-    "localip",
-    "battery",
-    "poweradapter",
+    "constants": [
+      "──────────────────────────"
+    ],
+    "key": {
+      "paddingLeft": 3
+    }
+  },
+  "modules": [
+    {
+      "format": "{#keys}┌{$1} {user-name-colored}{at-symbol-colored}{host-name-colored}{#keys} {$1}┐",
+      "color": {
+        "user": "cyan",
+        "at": "white",
+        "host": "cyan"
+      },
+      "type": "title"
+    },
     "break",
-    "colors"
+    {
+      "key": "{#31}{icon} Distro    ",
+      "type": "os"
+    },
+    {
+      "key": "{#32} Kernel    ",
+      "type": "kernel"
+    },
+    {
+      "key": "{#33}󰅐 Uptime    ",
+      "type": "uptime"
+    },
+    {
+      "key": "{#39}󰍹 Display   ",
+      "type": "display"
+    },
+    {
+      "key": "{#34}󰇄 Desktop   ",
+      "type": "de"
+    },
+    {
+      "key": "{#35} Terminal  ",
+      "type": "terminal"
+    },
+    {
+      "key": "{#36} Shell     ",
+      "type": "shell"
+    },
+    {
+      "key": "{#35}󰍛 CPU       ",
+      "type": "cpu",
+      "showPeCoreCount": true
+    },
+    {
+      "key": "{#34}󰾲 GPU       ",
+      "type": "gpu"
+    },
+    {
+      "key": "{#33}󰉉 Disk      ",
+      "type": "disk"
+    },
+    {
+      "key": "{#32} Memory    ",
+      "type": "memory"
+    },
+    {
+      "key": "{#31}󰩟 Network   ",
+      "type": "localip",
+      "format": "{ipv4} ({ifname})"
+    },
+    {
+      "key": "{#39} Colors    ",
+      "type": "colors",
+      "symbol": "circle"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "{#keys}└{$1}──────────────{$1}┘{#}"
+    }
   ]
 }
