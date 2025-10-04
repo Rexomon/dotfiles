@@ -42,14 +42,14 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = tokyonight_night
+theme = TokyoNight Night
 shell-integration-features = true
 cursor-style = block
 #gtk-adwaita = false
 gtk-titlebar = false
- 
+
 window-new-tab-position = end
-window-theme = ghostty 
+window-theme = ghostty
 window-colorspace = "srgb"
 window-height = 30
 window-width = 110
