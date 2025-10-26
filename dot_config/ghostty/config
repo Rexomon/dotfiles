@@ -45,7 +45,6 @@
 theme = TokyoNight Night
 shell-integration-features = true
 cursor-style = block
-#gtk-adwaita = false
 gtk-titlebar = false
 
 window-new-tab-position = end
