@@ -51,7 +51,7 @@ window {
   margin: 20px;
   padding: 15px;
   border-radius: 10px;
-  color: @foreground;
+  color: #cccccc;
   background-color: alpha(@background, 0.25);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -73,7 +73,7 @@ window {
 
 /* Normal text */
 #entry #text {
-  color: @foreground;
+  color: #cccccc;
   margin-left: 15px;
 }
 
