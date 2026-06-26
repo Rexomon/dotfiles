@@ -122,6 +122,7 @@ binds {
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
     Alt+Ctrl+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Ctrl+Shift+Up { spawn "fish" "-c" "~/.config/niri/switch-resolution.sh"; }
     Super+E hotkey-overlay-title="File Explorer" { spawn "nautilus"; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
